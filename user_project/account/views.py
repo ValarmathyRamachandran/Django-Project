@@ -1,11 +1,13 @@
+import generics as generics
 from rest_framework.views import APIView, Response
+from rest_framework import generics
 from .serializers import RegistrationSerializer, LoginSerializers
 from django.contrib.auth import get_user_model, authenticate, login
 
 User = get_user_model()
 
 
-class RegistrationAPIView(APIView):
+class RegistrationAPIView(generics.GenericAPIView):
 
     def post(self, request):
         """
