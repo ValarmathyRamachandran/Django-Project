@@ -1,34 +1,49 @@
-import json
-from django.contrib import messages
-from rest_framework import permissions
-from rest_framework.decorators import permission_classes
-from rest_framework.generics import GenericAPIView
-from user_project.account.models import Account
-from .serializers import MyTokenObtainPairSerializer
-from rest_framework.permissions import AllowAny
-from rest_framework_simplejwt.views import TokenObtainPairView
+from rest_framework.views import APIView, Response
+from .serializers import RegistrationSerializer, LoginSerializers
+from django.contrib.auth import get_user_model, authenticate, login
+
+User = get_user_model()
 
 
-class MyObtainTokenPairView(TokenObtainPairView):
-    permission_classes = (AllowAny,)
-    serializer_class = MyTokenObtainPairSerializer
+class RegistrationAPIView(APIView):
 
-
-class RegistrationAPIView(GenericAPIView):
-    @permission_classes((permissions.AllowAny,))
     def post(self, request):
         """
-        post api is for user registration for this app
+        post api is for user registration for registering new users
         :return: message after validations for adding new user
         """
         req_data = request.data
-        print(request.data)
-        record = json.loads(req_data)
-        del record['confirm_password']
-        account = Account(id=record['id'], first_name=record['first_name'], last_name=record['last_name'],
-                          user_name=record['user_name'], email=record['email'], password=record['password'])
-        if Account.objects.filter(email=account.email):
-            return {'msg': 'User Already exists'}
-        account.save()
-        messages.success(request, f'Your account has been created! You are now able to log in')
-        return {'msg': 'User Registered successfully'}, 200
+        serializer = RegistrationSerializer(data=req_data)
+        serializer.is_valid(raise_exception=True)
+        first_name = serializer.data.get('first_name')
+        last_name = serializer.data.get('last_name')
+        username = serializer.data.get('username')
+        email = serializer.data.get('email')
+        password = serializer.data.get('password')
+
+        user = User.objects.create_user(first_name=first_name, last_name=last_name,
+                                        username=username, email=email, password=password)
+        # if User.objects.filter(email=user.email):
+        # return Response({'msg': 'User Already exists'})
+        user.save()
+        return Response({'msg': 'User Registered successfully', 'code': 200})
+
+
+class LoginApiView(APIView):
+    permission_classes = ()
+    authentication_classes = ()
+
+    def post(self, request):
+        data = request.data
+        serializer = LoginSerializers(data=data)
+        serializer.is_valid(raise_exception=True)
+        username = serializer.data.get('username')
+        password = serializer.data.get('password')
+        print(type(username))
+        print(password)
+        user = authenticate(request, username=username, password=password)
+        print(user)
+        if not user:
+            return Response({'Error': 'Invalid email or password', 'Code': 401})
+        login(request, user)
+        return Response({'msg': 'User Logged in Successfully', 'Code': 200})
