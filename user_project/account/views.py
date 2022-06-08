@@ -1,19 +1,21 @@
-from django.core.exceptions import ValidationError
-from django.core.validators import validate_email
+from django.contrib.sites.shortcuts import get_current_site
 from django.db.models import Q
 from django.http import HttpResponse
+from django.urls import reverse
 from rest_framework.views import Response
 from .serializers import RegistrationSerializer, LoginSerializers
-from django.contrib.auth import get_user_model, authenticate, login
+from django.contrib.auth import get_user_model, authenticate, login, logout, get_user
 from rest_framework import permissions, generics
+
+from .token_operations import get_token
 
 User = get_user_model()
 
 
-class RegistrationAPIView(generics.GenericAPIView):
+class RegistrationApiView(generics.GenericAPIView):
     permission_classes = ()
-    serializer_class = RegistrationSerializer
     authentication_classes = ()
+    serializer_class = RegistrationSerializer
 
     def post(self, request, *args, **kwargs):
         """
@@ -31,27 +33,25 @@ class RegistrationAPIView(generics.GenericAPIView):
         password = req_data.get('password')
         confirm_password = req_data.get('confirm_password')
         try:
-            validate_email(email)
-        except ValidationError:
-            return Response('Please enter valid email')
-        query = User.objects.filter(
-            Q(username__iexact=username))
+            query = User.objects.filter(Q(email__iexact=email))
+            if query.exists():
+                return HttpResponse('user already exists')
 
-        if query.exists():
-            return HttpResponse('user already exists')
-
-        if password != confirm_password:
-            return HttpResponse('password did not match')
-        try:
-            user = User.objects.create_user(first_name=first_name, last_name=last_name, username=username, email=email)
-            print(user)
+            user = User.objects.create_user(first_name=first_name, last_name=last_name, username=username,
+                                            email=email)
+            # print(user)
             user.set_password(password)
             user.is_active = False
             user.save()
-            print("hi", user)
-            return HttpResponse("User Created Successfully", user)
+            current_site = get_current_site(request).domain
+            token = get_token(user).get('access')
+            link = reverse('activate')
+            surl = 'http://' + current_site + link + '?token=' + token
+
+            return Response({"msg": "User Created Successfully and activate link to activate the account", 'code': 200,
+                             'activate link': surl})
         except Exception as e:
-            return HttpResponse("Oops! Something went wrong, please try again later.", e)
+            return Response({"msg": "Oops! Something went wrong, please try again later.", "error": e})
 
 
 class LoginApiView(generics.GenericAPIView):
@@ -66,12 +66,26 @@ class LoginApiView(generics.GenericAPIView):
             username = data.get('username')
             password = data.get('password')
             user = authenticate(request, username=username, password=password)
-            # print(user)
-
             if not user:
                 return Response({'Error': 'Invalid email or password', 'code': 401})
             login(request, user)
-            return Response({'msg': 'User Logged in Successfully', 'code': 200})
+            token = get_token(user)
+            return Response({'msg': 'User Logged in Successfully', 'code': 200, 'token': token})
 
         except Exception:
-            return HttpResponse("Oops! Something went wrong, please try again later")
+            return Response({'msg': 'Oops! Something went wrong, please try again later', 'code': 400})
+
+
+class ActivateApiView(generics.GenericAPIView):
+    def get(self, request):
+        user_id = get_user(request)
+        user = User.objects.get(pk=user_id)
+        user.is_active = True
+        user.save()
+        return Response({'msg': 'User Account is activated successfully', 'code': 200})
+
+
+class LogoutApiView(generics.GenericAPIView):
+    def get(self, request):
+        logout(request)
+        return Response({'msg': 'User Logged Out Successfully', 'code': 200})
