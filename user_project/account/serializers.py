@@ -50,3 +50,15 @@ class EmailSerializers(serializers.ModelSerializer):
         fields = [
             'email'
         ]
+
+
+class ResetPasswordSerializer(serializers.ModelSerializer):
+    username = serializers.CharField()
+    old_password = serializers.CharField(style={'input_type': 'password'})
+    new_password = serializers.CharField(style={'input_type': 'password'})
+    confirm_new_password = serializers.CharField(style={'input_type': 'password'})
+
+    class Meta:
+        model = User
+        fields = ['username', 'old_password', 'new_password', 'confirm_new_password']
+        required_fields = ['username', 'new_password']

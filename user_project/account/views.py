@@ -1,13 +1,15 @@
+from django.contrib.auth.password_validation import validate_password
+from django.contrib.sites import requests
 from django.contrib.sites.shortcuts import get_current_site
 from django.db.models import Q
 from django.http import HttpResponse
 from django.urls import reverse
 from rest_framework.views import Response
-from .serializers import RegistrationSerializer, LoginSerializers
+from .serializers import RegistrationSerializer, LoginSerializers, ResetPasswordSerializer
 from django.contrib.auth import get_user_model, authenticate, login, logout, get_user
 from rest_framework import permissions, generics
 
-from .token_operations import get_token
+from .token_operations import get_token, get_data, Common
 
 User = get_user_model()
 
@@ -44,9 +46,10 @@ class RegistrationApiView(generics.GenericAPIView):
             user.is_active = False
             user.save()
             current_site = get_current_site(request).domain
-            token = get_token(user).get('access')
+            token = get_data(user).get('access')
+            short_token = Common.token_encode(token)
             link = reverse('activate')
-            surl = 'http://' + current_site + link + '?token=' + token
+            surl = 'http://' + current_site + link + '?token=' + short_token
 
             return Response({"msg": "User Created Successfully and activate link to activate the account", 'code': 200,
                              'activate link': surl})
@@ -78,8 +81,8 @@ class LoginApiView(generics.GenericAPIView):
 
 class ActivateApiView(generics.GenericAPIView):
     def get(self, request):
-        user_id = get_user(request)
-        user = User.objects.get(pk=user_id)
+        user_data = get_data(request)
+        user = User.objects.get(user_data)
         user.is_active = True
         user.save()
         return Response({'msg': 'User Account is activated successfully', 'code': 200})
@@ -89,3 +92,18 @@ class LogoutApiView(generics.GenericAPIView):
     def get(self, request):
         logout(request)
         return Response({'msg': 'User Logged Out Successfully', 'code': 200})
+
+
+class ResetPasswordApiView(generics.GenericAPIView):
+    authentication_classes = ()
+    serializer_class = ResetPasswordSerializer
+
+    def post(self, request):
+        data = request.data
+        serializer = ResetPasswordSerializer(data=data)
+        serializer.is_valid(raise_exception=True)
+
+        user = User.objects.get(username=data.get('username'))
+        user.set_password(data.get('new_password'))
+        user.save()
+        return Response({'msg': 'New password Updated Successfully', 'code': 200})

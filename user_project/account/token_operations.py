@@ -1,7 +1,9 @@
+import base64
 from django.conf import settings
 from django.core.mail import EmailMessage
 from django.utils.baseconv import base64
 from jwt import decode
+
 from rest_framework_simplejwt.tokens import RefreshToken
 
 
@@ -21,7 +23,17 @@ class Common:
             subject=data.get('subject'), body=data.get('email_body'), to=[data.get('email')])
         message.send()
 
-    def true_token(token_):
+    @staticmethod
+    def token_encode(token):
+        token_string_bytes = token.encode("ascii")
+
+        base64_bytes = base64.b64encode(token_string_bytes)
+        base64_string = base64_bytes.decode("ascii")
+
+        return base64_string
+
+    @staticmethod
+    def token_decode(token_):
         base64_bytes = token_.encode("ascii")
 
         sample_string_bytes = base64.b64decode(base64_bytes)
@@ -29,14 +41,14 @@ class Common:
         return sample_string
 
 
-def get_user(request):
+def get_data(request):
     url_token = request.headers.get('Token')
     if not url_token:
         url_token = request.query_params.get('token')
-    token = Common.true_token(url_token)
+    token = Common.token_decode(url_token)
     data = decode(token, settings.SECRET_KEY, 'HS256')
-    user_id = data['user_id']
-    return user_id
+    user_data = data
+    return user_data
 
 # class Email():
 #     def send_email(self):
