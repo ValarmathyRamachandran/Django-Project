@@ -2,7 +2,7 @@ import logging
 from rest_framework import generics
 from rest_framework.response import Response
 from .models import Book
-from .serializers import BookSerializer
+from .serializers import BookSerializer, GetBookByRatingSerializer
 
 
 class AddBookAPI(generics.GenericAPIView):
@@ -23,7 +23,11 @@ class AddBookAPI(generics.GenericAPIView):
             book.is_valid()
 
             if Book.objects.filter(name=request.data['name']).exists():
-                return Response({'msg': 'Book name already exists', 'code': 401})
+                book = Book.objects.get(quantity=request.data['quantity'],
+                                        total_book_added=request.data['total_book_added'])
+                book.quantity = book.total_book_added + book.quantity
+                return Response(
+                    {'msg': 'Book name already exists ,so added the given quantity', 'code': 401, 'quantity': book.quantity})
 
             book.save()
             return Response({'msg': 'Book Created successfully', 'data': book.data, 'code': 200})
@@ -33,56 +37,59 @@ class AddBookAPI(generics.GenericAPIView):
             return Response({'msg': 'Invalid Details provided', 'code': 400})
 
     def get(self, request):
-            """
+        """
             Get all books
             :param request:
             :return: Books
             """
-            try:
-                all_books = Book.objects.all()
-                book_dict = BookSerializer(all_books, many=True)
-                return Response({ 'msg': 'Displayed all book details', 'data': book_dict.data})
+        try:
+            all_books = Book.objects.order_by('-rating')
+            # all_books = Book.objects.all()
+            book_dict = GetBookByRatingSerializer(all_books, many=True)
+            return Response({'msg': 'Displayed all book details by rating order', 'data': book_dict.data})
 
-            except Exception as e:
-                self.logger.exception(msg=e)
-                return Response({'success': 'False', 'message': 'Error'})
+        except Exception as e:
+            self.logger.exception(msg=e)
+            return Response({'success': 'False', 'message': 'Error'})
 
     def put(self, request):
-            """
-            Update author_name and released date name based on book_name.
+        """
+            Update author name and released date name based on book name.
             :param request:
-            :return: Json reponse of success or failure
+            :return: reponse of success or failure
             """
 
-            try:
+        try:
 
-                book_object = Book.objects.get(name=request.data['name'])
-                if book_object:
-                    books = BookSerializer(book_object, data=request.data)
-                    books.is_valid()
-                    books.save()
-                    return Response({'msg': 'Successfully updated book data',
-                                         'data': books.data, 'code':200})
-                else:
-                    return Response({'msg': 'book_name does not exist', 'code': 401})
+            book_object = Book.objects.get(name=request.data['name'])
+            if book_object:
+                books = BookSerializer(book_object, data=request.data)
+                books.is_valid()
+                books.save()
+                return Response({'msg': 'Successfully updated book data',
+                                 'data': books.data, 'code': 200})
+            else:
+                return Response({'msg': 'book_name does not exist', 'code': 401})
 
-            except Exception as e:
-                self.logger.exception(msg=e)
-                return Response({'msg': 'error', 'code': 400})
+        except Exception as e:
+            self.logger.exception(msg=e)
+            return Response({'msg': 'error', 'code': 400})
 
     def delete(self, request):
-            """
-            Reduce the book quantity by 1  based on given book_name
+        """
+            Reduce the book quantity based on given book_name
             :param request:
             :return:  Response
             """
 
-            try:
-                if Book.objects.get(name=request.data['name']):
-                    # book.update(quantity=quantity-1)
-                    return Response({'msg': 'quantity reduced successfully', 'code': 200})
-                else:
-                    return Response({'msg': 'book doesnt exist', 'code': 401})
-            except Exception as e:
-                self.logger.exception(msg=e)
-                return Response({'msg': 'book does not exists or error', 'code': 409})
+        try:
+            if Book.objects.get(name=request.data['name']):
+                book = Book.objects.get(quantity=request.data['quantity'],
+                                        total_book_added=request.data['total_book_added'])
+                book.quantity = book.total_book_added - book.quantity
+                return Response({'msg': 'Given quantity of book was reduced successfully', 'code': 200, 'quantity':book.quantity})
+            else:
+                return Response({'msg': 'book doesnt exist', 'code': 401})
+        except Exception as e:
+            self.logger.exception(msg=e)
+            return Response({'msg': 'book does not exists or error', 'code': 409})
