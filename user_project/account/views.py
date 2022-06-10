@@ -1,5 +1,3 @@
-from django.contrib.auth.password_validation import validate_password
-from django.contrib.sites import requests
 from django.contrib.sites.shortcuts import get_current_site
 from django.db.models import Q
 from django.http import HttpResponse

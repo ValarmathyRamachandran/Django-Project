@@ -1,7 +1,7 @@
 from django.urls import path
-from django.contrib.auth import views as auth_views
-from .views import *
+from .views import AddBookAPI
 
-# urlpatterns = [
-#     path('', BookListView.as_view(), name='book_list'),
-# ]
+urlpatterns = [
+    path('book/', AddBookAPI.as_view(), name='book operations'),
+
+]
