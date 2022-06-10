@@ -14,6 +14,7 @@ class BookSerializer(serializers.ModelSerializer):
 class GetBookByRatingSerializer(serializers.ModelSerializer):
     # rating = serializers.IntegerField()
     # total_book_added = serializers.IntegerField()
+    paginate_by = 2
 
     class Meta:
         model = Book
