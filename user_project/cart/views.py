@@ -1,19 +1,13 @@
 import logging
-
-import book
-import jwt
-import kwargs as kwargs
 from book.models import Book
-from django.contrib import messages
 from django.contrib.auth.models import User
-from prompt_toolkit.filters import app
-from rest_framework import generics, request
+from django.utils.decorators import method_decorator
+from rest_framework import generics
 from rest_framework.response import Response
-
+from .custom_exceptions import BookDoesnotNotExist, UserDoesNotExist
 from .models import Cart
-
-from .serializer import AddToCartSerializer, GetCartSerializer
-from .utility import  token_required
+from .serializer import AddToCartSerializer
+from .utility import token_required
 
 
 class AddToCart(generics.GenericAPIView):
@@ -21,25 +15,31 @@ class AddToCart(generics.GenericAPIView):
     logger = logging.getLogger(__name__)
     serializer_class = AddToCartSerializer
 
-    def post(self, request):
+    @method_decorator(token_required)
+    def post(self, request, user_id):
         """
         Add items to cart.
+        :param user_id:
         :param request: cart item data
         :return: response of cart added
         """
         try:
-            user = token_required(request)
             data = request.data
-            cart = AddToCartSerializer(data)
+            serializer = AddToCartSerializer(data)
 
-            cart_data = dict(cart.data)
-            # print("cart", cart_data)
-            book_id = cart_data.get('book_id')
-            quantity = cart_data.get('quantity')
-            books = Book.objects.get(id=book_id)
+            user_data = dict(serializer.data)
+            book_id = user_data.get('book_id')
+            quantity = user_data.get('quantity')
+            books = Book.objects.get(pk=book_id)
+            print('book', books)
+            if not books:
+                raise BookDoesnotNotExist('Book does not Exist', 404)
             total_price = books.price * quantity
-            user_id = User.objects.get(id=user)
-            cart = Cart.objects.create(user_id=user_id, book_id=books, quantity=quantity, total_price=total_price)
+            user = User.objects.get(pk=user_id)
+            print("hello", user)
+            if not user:
+                raise UserDoesNotExist('User does not Exist', 404)
+            cart = Cart.objects.create(user_id=user, book_id=books, quantity=quantity, total_price=total_price)
             cart.save()
             return Response({'msg': f'{books.name} added to cart successfully', 'code': 200})
 
