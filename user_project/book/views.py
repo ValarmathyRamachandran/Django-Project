@@ -25,7 +25,7 @@ class AddBookAPI(generics.GenericAPIView):
 
             if Book.objects.filter(name=request.data['name']).exists():
                 book = Book.objects.get(quantity=request.data['quantity'],
-                                        total_book_added=request.data['total_book_added'])
+               total_book_added=request.data['total_book_added'])
                 book.quantity = book.total_book_added + book.quantity
                 return Response(
                     {'msg': 'Book name already exists ,so added the given quantity', 'code': 401,

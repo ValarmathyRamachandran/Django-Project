@@ -11,7 +11,7 @@ class Book(models.Model):
     quantity = models.IntegerField(default=1, validators=[MaxValueValidator(100), MinValueValidator(1)])
     description = models.TextField(max_length=1000, null=True)
     date_created = models.DateTimeField(auto_now_add=True)
-    image_field = models.ImageField(upload_to='', max_length=200, null=True, default=None)
+    image_field = models.ImageField(upload_to='static/', max_length=200, null=True, default=None)
     rating = models.IntegerField(null=True, blank=True)
     total_book_added = models.IntegerField(default=1, blank=False)
     date_updated = models.DateTimeField(auto_now=True)
