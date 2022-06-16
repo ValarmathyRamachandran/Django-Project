@@ -13,4 +13,4 @@ class Cart(models.Model):
     date_updated = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return str(self.user_id)
+        return str(self.book_id)

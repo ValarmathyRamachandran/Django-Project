@@ -1485,3 +1485,1390 @@ Traceback (most recent call last):
     raise ExpiredSignatureError("Signature has expired")
 jwt.exceptions.ExpiredSignatureError: Signature has expired
 "POST /cart/addtocart/?user_id=1 HTTP/1.1" 500 116421
+Internal Server Error: /cart/addtocart/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 31, in decorated
+    data = decode(token, settings.SECRET_KEY, 'HS256')
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 129, in decode
+    decoded = self.decode_complete(jwt, key, algorithms, options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 116, in decode_complete
+    self._validate_claims(payload, merged_options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 152, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 187, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+"GET /cart/addtocart/?user_id=1 HTTP/1.1" 500 116520
+Internal Server Error: /cart/addtocart/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 31, in decorated
+    data = decode(token, settings.SECRET_KEY, 'HS256')
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 129, in decode
+    decoded = self.decode_complete(jwt, key, algorithms, options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 116, in decode_complete
+    self._validate_claims(payload, merged_options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 152, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 187, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+"GET /cart/addtocart/?user_id=1 HTTP/1.1" 500 116514
+Internal Server Error: /cart/addtocart/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 31, in decorated
+    data = decode(token, settings.SECRET_KEY, 'HS256')
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 129, in decode
+    decoded = self.decode_complete(jwt, key, algorithms, options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 116, in decode_complete
+    self._validate_claims(payload, merged_options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 152, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 187, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+"GET /cart/addtocart/?user_id=1 HTTP/1.1" 500 116514
+Internal Server Error: /cart/addtocart/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 31, in decorated
+    data = decode(token, settings.SECRET_KEY, 'HS256')
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 129, in decode
+    decoded = self.decode_complete(jwt, key, algorithms, options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 116, in decode_complete
+    self._validate_claims(payload, merged_options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 152, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 187, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+"GET /cart/addtocart/?user_id=1 HTTP/1.1" 500 116514
+Internal Server Error: /cart/addtocart/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 31, in decorated
+    data = decode(token, settings.SECRET_KEY, 'HS256')
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 129, in decode
+    decoded = self.decode_complete(jwt, key, algorithms, options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 116, in decode_complete
+    self._validate_claims(payload, merged_options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 152, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 187, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+"GET /cart/addtocart/?user_id=1 HTTP/1.1" 500 116514
+Internal Server Error: /cart/addtocart/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 31, in decorated
+    data = decode(token, settings.SECRET_KEY, 'HS256')
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 129, in decode
+    decoded = self.decode_complete(jwt, key, algorithms, options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 116, in decode_complete
+    self._validate_claims(payload, merged_options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 152, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 187, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+"GET /cart/addtocart/?user_id=1 HTTP/1.1" 500 116517
+Internal Server Error: /cart/addtocart/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 31, in decorated
+    data = decode(token, settings.SECRET_KEY, 'HS256')
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 129, in decode
+    decoded = self.decode_complete(jwt, key, algorithms, options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 116, in decode_complete
+    self._validate_claims(payload, merged_options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 152, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 187, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+"GET /cart/addtocart/?user_id=1 HTTP/1.1" 500 116517
+Internal Server Error: /cart/addtocart/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 31, in decorated
+    data = decode(token, settings.SECRET_KEY, 'HS256')
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 129, in decode
+    decoded = self.decode_complete(jwt, key, algorithms, options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 116, in decode_complete
+    self._validate_claims(payload, merged_options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 152, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 187, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+"GET /cart/addtocart/?user_id=1 HTTP/1.1" 500 116517
+Internal Server Error: /cart/addtocart/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 31, in decorated
+    data = decode(token, settings.SECRET_KEY, 'HS256')
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 129, in decode
+    decoded = self.decode_complete(jwt, key, algorithms, options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 116, in decode_complete
+    self._validate_claims(payload, merged_options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 152, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 187, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+"GET /cart/addtocart/?user_id=1 HTTP/1.1" 500 116517
+Internal Server Error: /cart/addtocart/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 31, in decorated
+    data = decode(token, settings.SECRET_KEY, 'HS256')
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 129, in decode
+    decoded = self.decode_complete(jwt, key, algorithms, options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 116, in decode_complete
+    self._validate_claims(payload, merged_options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 152, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 187, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+"GET /cart/addtocart/?user_id=1 HTTP/1.1" 500 116517
+Internal Server Error: /cart/addtocart/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 31, in decorated
+    data = decode(token, settings.SECRET_KEY, 'HS256')
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 129, in decode
+    decoded = self.decode_complete(jwt, key, algorithms, options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 116, in decode_complete
+    self._validate_claims(payload, merged_options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 152, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 187, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+"GET /cart/addtocart/?user_id=1 HTTP/1.1" 500 116517
+Internal Server Error: /cart/addtocart/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 31, in decorated
+    data = decode(token, settings.SECRET_KEY, 'HS256')
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 129, in decode
+    decoded = self.decode_complete(jwt, key, algorithms, options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 116, in decode_complete
+    self._validate_claims(payload, merged_options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 152, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 187, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+"GET /cart/addtocart/?user_id=1 HTTP/1.1" 500 116517
+Internal Server Error: /cart/addtocart/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 31, in decorated
+    data = decode(token, settings.SECRET_KEY, 'HS256')
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 129, in decode
+    decoded = self.decode_complete(jwt, key, algorithms, options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 116, in decode_complete
+    self._validate_claims(payload, merged_options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 152, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 187, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+"GET /cart/addtocart/?user_id=1 HTTP/1.1" 500 116517
+Internal Server Error: /cart/addtocart/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'dict'>`
+"GET /cart/addtocart/?user_id=1 HTTP/1.1" 500 79399
+Internal Server Error: /cart/addtocart/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 31, in decorated
+    data = decode(token, settings.SECRET_KEY, 'HS256')
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 129, in decode
+    decoded = self.decode_complete(jwt, key, algorithms, options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 116, in decode_complete
+    self._validate_claims(payload, merged_options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 152, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 187, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+"GET /cart/addtocart/?user_id=1 HTTP/1.1" 500 116517
+Internal Server Error: /cart/addtocart/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 31, in decorated
+    data = decode(token, settings.SECRET_KEY, 'HS256')
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 129, in decode
+    decoded = self.decode_complete(jwt, key, algorithms, options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 116, in decode_complete
+    self._validate_claims(payload, merged_options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 152, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 187, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+"GET /cart/addtocart/?user_id=1 HTTP/1.1" 500 116530
+Internal Server Error: /cart/addtocart/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 31, in decorated
+    data = decode(token, settings.SECRET_KEY, 'HS256')
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 129, in decode
+    decoded = self.decode_complete(jwt, key, algorithms, options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 116, in decode_complete
+    self._validate_claims(payload, merged_options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 152, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 187, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+"GET /cart/addtocart/?user_id=1 HTTP/1.1" 500 116526
+Internal Server Error: /cart/addtocart/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'dict'>`
+"PATCH /cart/addtocart/?user_id=1 HTTP/1.1" 500 77705
+Internal Server Error: /cart/addtocart/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 33, in decorated
+    return f(request, user_id, *args, **kwargs)
+TypeError: patch() missing 1 required positional argument: 'cart_id'
+"PATCH /cart/addtocart/?user_id=1 HTTP/1.1" 500 96370
+Internal Server Error: /cart/addtocart/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 33, in decorated
+    return f(request, user_id, *args, **kwargs)
+TypeError: patch() missing 1 required positional argument: 'cart_id'
+"PATCH /cart/addtocart/?user_id=1&cart_id=1 HTTP/1.1" 500 96680
+Not Found: /order/ordercheckout/
+"POST /order/ordercheckout/ HTTP/1.1" 404 3119
+Not Found: /order/ordercheckout/<1>
+"POST /order/ordercheckout/%3C1%3E HTTP/1.1" 404 3144
+Not Found: /order/ordercheckout/
+"POST /order/ordercheckout/?user_id=1&cart_id=2 HTTP/1.1" 404 3143
+Not Found: /order/ordercheckout/
+"POST /order/ordercheckout/?user_id=1&cart_id=10 HTTP/1.1" 404 3144
+Not Found: /order/ordercheckout/
+"POST /order/ordercheckout/?user_id=1&cart_id=10 HTTP/1.1" 404 3144
+Not Found: /order/ordercheckout/
+"POST /order/ordercheckout/?user_id=45&cart_id=10 HTTP/1.1" 404 3145
+Not Found: /order/ordercheckout/
+"POST /order/ordercheckout/?user_id=45&cart_id=10 HTTP/1.1" 404 3145
+Not Found: /order/ordercheckout/
+"POST /order/ordercheckout/?user_id=45 HTTP/1.1" 404 3130
+Not Found: /order/ordercheckout/
+"POST /order/ordercheckout/ HTTP/1.1" 404 3119
+Internal Server Error: /order/ordercheckout/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 33, in decorated
+    return f(request, user_id, *args, **kwargs)
+TypeError: post() missing 1 required positional argument: 'cart_id'
+"POST /order/ordercheckout/ HTTP/1.1" 500 96306
+Internal Server Error: /order/ordercheckout/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 33, in decorated
+    return f(request, user_id, *args, **kwargs)
+TypeError: post() missing 1 required positional argument: 'cart_id'
+"POST /order/ordercheckout/ HTTP/1.1" 500 96306
+Internal Server Error: /order/ordercheckout/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 33, in decorated
+    return f(request, user_id, *args, **kwargs)
+TypeError: post() missing 1 required positional argument: 'cart_id'
+"POST /order/ordercheckout/?user_id=45 HTTP/1.1" 500 96738
+Internal Server Error: /order/ordercheckout/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 33, in decorated
+    return f(request, user_id, *args, **kwargs)
+TypeError: post() missing 1 required positional argument: 'cart_id'
+"POST /order/ordercheckout/?user_id=1 HTTP/1.1" 500 96724
+Internal Server Error: /order/ordercheckout/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 33, in decorated
+    return f(request, user_id, *args, **kwargs)
+TypeError: post() missing 1 required positional argument: 'cart_id'
+"POST /order/ordercheckout/?user_id=1 HTTP/1.1" 500 96724
+Internal Server Error: /order/ordercheckout/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 31, in decorated
+    data = decode(token, settings.SECRET_KEY, 'HS256')
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 129, in decode
+    decoded = self.decode_complete(jwt, key, algorithms, options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 116, in decode_complete
+    self._validate_claims(payload, merged_options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 152, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 187, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+"POST /order/ordercheckout/?user_id=1&cart_id=10 HTTP/1.1" 500 117240
+Internal Server Error: /order/ordercheckout/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 31, in decorated
+    data = decode(token, settings.SECRET_KEY, 'HS256')
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 129, in decode
+    decoded = self.decode_complete(jwt, key, algorithms, options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 116, in decode_complete
+    self._validate_claims(payload, merged_options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 152, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 187, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+"POST /order/ordercheckout/?user_id=1&cart_id=10 HTTP/1.1" 500 117240
+Internal Server Error: /order/ordercheckout/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 31, in decorated
+    data = decode(token, settings.SECRET_KEY, 'HS256')
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 129, in decode
+    decoded = self.decode_complete(jwt, key, algorithms, options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 116, in decode_complete
+    self._validate_claims(payload, merged_options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 152, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 187, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+"POST /order/ordercheckout/?user_id=1&cart_id=10 HTTP/1.1" 500 117240
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3011
+Internal Server Error: /order/ordercheckout/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 33, in decorated
+    return f(request, user_id, *args, **kwargs)
+TypeError: post() missing 1 required positional argument: 'cart_id'
+"POST /order/ordercheckout/?user_id=1&cart_id=10 HTTP/1.1" 500 96629
+Internal Server Error: /order/ordercheckout/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 33, in decorated
+    return f(request, user_id, *args, **kwargs)
+TypeError: post() missing 1 required positional argument: 'cart_id'
+"POST /order/ordercheckout/?user_id=1&cart_id=10 HTTP/1.1" 500 96629
+Internal Server Error: /order/ordercheckout/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 31, in decorated
+    data = decode(token, settings.SECRET_KEY, 'HS256')
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 129, in decode
+    decoded = self.decode_complete(jwt, key, algorithms, options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 116, in decode_complete
+    self._validate_claims(payload, merged_options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 152, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 187, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+"POST /order/ordercheckout/?user_id=1&cart_id=10 HTTP/1.1" 500 116817
+Internal Server Error: /order/ordercheckout/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Django-Project\user_project\cart\utility.py", line 31, in decorated
+    data = decode(token, settings.SECRET_KEY, 'HS256')
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 129, in decode
+    decoded = self.decode_complete(jwt, key, algorithms, options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 116, in decode_complete
+    self._validate_claims(payload, merged_options, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 152, in _validate_claims
+    self._validate_exp(payload, now, leeway)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\jwt\api_jwt.py", line 187, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired")
+jwt.exceptions.ExpiredSignatureError: Signature has expired
+"POST /order/ordercheckout/ HTTP/1.1" 500 116075
+Internal Server Error: /book/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Django-Project\user_project\book\views.py", line 49, in get
+    if cache.get(request):
+AttributeError: module 'django_redis.cache' has no attribute 'get'
+"GET /book/ HTTP/1.1" 500 90869
+Internal Server Error: /book/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Django-Project\user_project\book\views.py", line 49, in get
+    if cache.get(request):
+AttributeError: module 'django_redis.cache' has no attribute 'get'
+"GET /book/ HTTP/1.1" 500 91006
+Internal Server Error: /book/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Django-Project\user_project\book\views.py", line 49, in get
+    if cache.get(id):
+AttributeError: module 'django_redis.cache' has no attribute 'get'
+"GET /book/ HTTP/1.1" 500 91147
+Internal Server Error: /book/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Django-Project\user_project\book\views.py", line 49, in get
+    if cache.get(id):
+AttributeError: module 'django_redis.cache' has no attribute 'get'
+"GET /book/ HTTP/1.1" 500 89443
+Internal Server Error: /book/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Django-Project\user_project\book\views.py", line 49, in get
+    if cache.get(id):
+AttributeError: module 'django_redis.cache' has no attribute 'get'
+"GET /book/ HTTP/1.1" 500 89443
+Internal Server Error: /book/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Django-Project\user_project\book\views.py", line 49, in get
+    if cache.get(id):
+AttributeError: module 'django_redis.cache' has no attribute 'get'
+"GET /book/ HTTP/1.1" 500 89443
+Internal Server Error: /book/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Django-Project\user_project\book\views.py", line 49, in get
+    if cache.get(id):
+AttributeError: module 'django_redis.cache' has no attribute 'get'
+"GET /book/ HTTP/1.1" 500 91147
+Not Found: /user/book/
+"GET /user/book/ HTTP/1.1" 404 3756
+Internal Server Error: /book/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Django-Project\user_project\book\views.py", line 49, in get
+    if cache.get(id):
+AttributeError: module 'django_redis.cache' has no attribute 'get'
+"GET /book/ HTTP/1.1" 500 91010
+Internal Server Error: /book/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\connection.py", line 1376, in get_connection
+    connection = self._available_connections.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Django-Project\user_project\book\views.py", line 50, in get
+    if cache.get(id):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\cache\backends\redis.py", line 189, in get
+    return self._cache.get(key, default)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\cache\backends\redis.py", line 101, in get
+    value = client.get(key)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\commands\core.py", line 1699, in get
+    return self.execute_command("GET", name)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\client.py", line 1232, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\connection.py", line 1378, in get_connection
+    connection = self.make_connection()
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\connection.py", line 1418, in make_connection
+    return self.connection_class(**self.connection_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'CLIENT_CLASS'
+"GET /book/ HTTP/1.1" 500 118464
+Internal Server Error: /book/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\connection.py", line 1376, in get_connection
+    connection = self._available_connections.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Django-Project\user_project\book\views.py", line 50, in get
+    if cache.get(id):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\cache\backends\redis.py", line 189, in get
+    return self._cache.get(key, default)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\cache\backends\redis.py", line 101, in get
+    value = client.get(key)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\commands\core.py", line 1699, in get
+    return self.execute_command("GET", name)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\client.py", line 1232, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\connection.py", line 1378, in get_connection
+    connection = self.make_connection()
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\connection.py", line 1418, in make_connection
+    return self.connection_class(**self.connection_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'CLIENT_CLASS'
+"GET /book/ HTTP/1.1" 500 120168
+Internal Server Error: /book/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\connection.py", line 1376, in get_connection
+    connection = self._available_connections.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Django-Project\user_project\book\views.py", line 50, in get
+    if cache.get(id):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\cache\backends\redis.py", line 189, in get
+    return self._cache.get(key, default)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\cache\backends\redis.py", line 101, in get
+    value = client.get(key)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\commands\core.py", line 1699, in get
+    return self.execute_command("GET", name)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\client.py", line 1232, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\connection.py", line 1378, in get_connection
+    connection = self.make_connection()
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\connection.py", line 1418, in make_connection
+    return self.connection_class(**self.connection_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'CLIENT_CLASS'
+"GET /book/ HTTP/1.1" 500 120168
+Internal Server Error: /book/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\connection.py", line 1376, in get_connection
+    connection = self._available_connections.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 125, in _wrapped_view
+    result = middleware.process_request(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\middleware\cache.py", line 152, in process_request
+    cache_key = get_cache_key(request, self.key_prefix, "GET", cache=self.cache)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\cache.py", line 388, in get_cache_key
+    headerlist = cache.get(cache_key)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\cache\backends\redis.py", line 189, in get
+    return self._cache.get(key, default)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\cache\backends\redis.py", line 101, in get
+    value = client.get(key)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\commands\core.py", line 1699, in get
+    return self.execute_command("GET", name)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\client.py", line 1232, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\connection.py", line 1378, in get_connection
+    connection = self.make_connection()
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\connection.py", line 1418, in make_connection
+    return self.connection_class(**self.connection_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'CLIENT_CLASS'
+"GET /book/ HTTP/1.1" 500 134935
+Internal Server Error: /book/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\connection.py", line 1376, in get_connection
+    connection = self._available_connections.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 125, in _wrapped_view
+    result = middleware.process_request(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\middleware\cache.py", line 152, in process_request
+    cache_key = get_cache_key(request, self.key_prefix, "GET", cache=self.cache)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\cache.py", line 388, in get_cache_key
+    headerlist = cache.get(cache_key)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\cache\backends\redis.py", line 189, in get
+    return self._cache.get(key, default)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\cache\backends\redis.py", line 101, in get
+    value = client.get(key)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\commands\core.py", line 1699, in get
+    return self.execute_command("GET", name)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\client.py", line 1232, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\connection.py", line 1378, in get_connection
+    connection = self.make_connection()
+  File "D:\Crud-operation-Django\venv\lib\site-packages\redis\connection.py", line 1418, in make_connection
+    return self.connection_class(**self.connection_kwargs)
+TypeError: __init__() got an unexpected keyword argument 'CLIENT_CLASS'
+"GET /book/ HTTP/1.1" 500 134935
+Internal Server Error: /book/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 155, in _wrapped_view
+    return middleware.process_response(request, response)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\middleware\cache.py", line 85, in process_response
+    if response.streaming or response.status_code not in (200, 304):
+AttributeError: 'NoneType' object has no attribute 'streaming'
+"GET /book/ HTTP/1.1" 500 101356
+Internal Server Error: /book/
+Traceback (most recent call last):
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\Crud-operation-Django\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\utils\decorators.py", line 155, in _wrapped_view
+    return middleware.process_response(request, response)
+  File "D:\Crud-operation-Django\venv\lib\site-packages\django\middleware\cache.py", line 85, in process_response
+    if response.streaming or response.status_code not in (200, 304):
+AttributeError: 'NoneType' object has no attribute 'streaming'
+"GET /book/ HTTP/1.1" 500 101356

@@ -1,3 +1,5 @@
+from abc import ABC
+
 from rest_framework import serializers
 from rest_framework.serializers import ModelSerializer
 from .models import Cart
@@ -18,3 +20,11 @@ class GetCartSerializer(serializers.Serializer):
     book_id = serializers.IntegerField()
     quantity = serializers.IntegerField()
     total_price = serializers.IntegerField()
+
+
+class UpdateCartSerializer(serializers.ModelSerializer):
+    quantity = serializers.IntegerField()
+
+    class Meta:
+        model = Cart
+        fields = '__all__'

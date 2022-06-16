@@ -6,7 +6,7 @@ from rest_framework import generics
 from rest_framework.response import Response
 from .custom_exceptions import BookDoesnotNotExist, UserDoesNotExist
 from .models import Cart
-from .serializer import AddToCartSerializer
+from .serializer import AddToCartSerializer, GetCartSerializer, UpdateCartSerializer
 from .utility import token_required
 
 
@@ -46,19 +46,49 @@ class AddToCart(generics.GenericAPIView):
         except Exception as e:
             return Response({'error': str(e), 'code': 404})
 
-    # def get(self, request):
-    #     """
-    #            get all items from cart.
-    #            :param request: empty
-    #            :return: response of cart items
-    #            """
-    #     try:
-    #         user_id = token_required(request)
-    #         user = User.objects.get(user_id)
-    #         cart = Cart.objects.filter(user=user)
-    #         cart_objects = GetCartSerializer(cart, many=True)
-    #         return Response({'msg': 'added to cart', 'data': cart_objects.data})
-    #     except Exception as e:
-    #         self.logger.debug(msg=str(e))
-    #         print(str(e))
-    #         return Response({'msg': 'failed to fetch data', 'error': str(e)})
+    @method_decorator(token_required)
+    def get(self, request, user_id):
+        """
+               get all items from cart.
+               :param user_id:
+               :param request: empty
+               :return: response of cart items by user id
+               """
+        try:
+            user = User.objects.get(pk=user_id)
+            print("user", user)
+            cart = Cart.objects.filter(user_id=user)
+
+            cart_items = GetCartSerializer(instance=cart, many=True)
+            print("cart_items", cart_items)
+            return Response({'cart_items ': cart_items.data, 'code': 200})
+        except Exception as e:
+            self.logger.debug(msg=str(e))
+            return Response({'msg': 'failed to fetch cart items', 'error': str(e)})
+
+    @method_decorator(token_required)
+    def patch(self, request, user_id, cart_id):
+        try:
+            data = request.data
+            serializer = UpdateCartSerializer(data)
+            quantity = serializer.data.get('quantity')
+            cart = Cart.objects.get(cart_id,pk=user_id)
+            cart.quantity = quantity
+            cart.total_price = cart.book.price * quantity
+            cart.save()
+            return Response({'msg': 'cart updated successfully', 'code': 200})
+        except Exception as e:
+            return Response({'Error': str(e), 'Code': 404})
+
+    @method_decorator(token_required)
+    def delete(self, request, user_id, cart_id):
+        try:
+            cart = Cart.objects.get(pk=cart_id)
+            if cart.user.id != user_id:
+                raise UserDoesNotExist('This user is not authorised to update', 404)
+            cart.delete()
+            return Response({'msg': 'Cart items Deleted', 'code': 200})
+        except UserDoesNotExist as exception:
+            return Response(exception.__dict__)
+        except Exception as e:
+            return Response({'error': str(e), 'code': 404})

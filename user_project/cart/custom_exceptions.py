@@ -4,3 +4,7 @@ class UserDoesNotExist(Exception):
 
 class BookDoesnotNotExist(Exception):
     pass
+
+
+class CartDoesNotExist(Exception):
+    pass

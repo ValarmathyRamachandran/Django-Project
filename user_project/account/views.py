@@ -7,7 +7,7 @@ from .serializers import RegistrationSerializer, LoginSerializers, ResetPassword
 from django.contrib.auth import get_user_model, authenticate, login, logout, get_user
 from rest_framework import permissions, generics
 
-from .token_operations import get_token, get_data, Common
+from .token_operations import get_token, get_data, Common, mail
 
 User = get_user_model()
 
@@ -35,11 +35,11 @@ class RegistrationApiView(generics.GenericAPIView):
         try:
             query = User.objects.filter(Q(email__iexact=email))
             if query.exists():
-                return HttpResponse('user already exists')
+                return Response({'msg': 'User already exists,Please login in', 'code': 401})
 
             user = User.objects.create_user(first_name=first_name, last_name=last_name, username=username,
                                             email=email)
-            # print(user)
+
             user.set_password(password)
             user.is_active = False
             user.save()
@@ -49,7 +49,8 @@ class RegistrationApiView(generics.GenericAPIView):
             link = reverse('activate')
             surl = 'http://' + current_site + link + '?token=' + short_token
 
-            return Response({"msg": "User Created Successfully and activate link to activate the account", 'code': 200,
+            return Response({'msg': 'Your account Created Successfully and activate link was sent to the registered '
+                                    'email', 'code': 200,
                              'activate link': surl})
         except Exception as e:
             return Response({"msg": "Oops! Something went wrong, please try again later.", "error": e})
@@ -71,6 +72,7 @@ class LoginApiView(generics.GenericAPIView):
                 return Response({'Error': 'Invalid email or password', 'code': 401})
             login(request, user)
             token = get_token(user)
+            mail()
             return Response({'msg': 'User Logged in Successfully', 'code': 200, 'token': token})
 
         except Exception:
@@ -78,6 +80,7 @@ class LoginApiView(generics.GenericAPIView):
 
 
 class ActivateApiView(generics.GenericAPIView):
+
     def get(self, request):
         user_data = get_data(request)
         user = User.objects.get(user_data)

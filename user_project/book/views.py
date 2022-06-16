@@ -1,9 +1,15 @@
 import logging
+
+from django.core.cache import cache
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
 from rest_framework import generics
 from rest_framework.response import Response
 from .models import Book
 from .serializers import BookSerializer, GetBookByRatingSerializer
 from django.core.paginator import Paginator
+
+from user_project.settings import CACHE_TTL
 
 
 class AddBookAPI(generics.GenericAPIView):
@@ -38,19 +44,27 @@ class AddBookAPI(generics.GenericAPIView):
             self.logger.exception(msg=e)
             return Response({'msg': 'Invalid Details provided', 'code': 400})
 
-    def get(self, request):
+    @method_decorator(cache_page(CACHE_TTL))
+    def get(self, request, id=None):
         """
             Get all books
+            :param id:
             :param request:
             :return: Books
             """
+
         try:
+            if id:
+                book = Book.objects.get(pk=id)
+                serializer = GetBookByRatingSerializer(book)
+                return Response({'Data': serializer.data, 'Code': 200})
             all_books = Book.objects.order_by('-rating')
             # all_books = Book.objects.all()
             book_dict = GetBookByRatingSerializer(all_books, many=True)
             paginator = Paginator(all_books, 5)
             page_number = request.GET.get('page')
             page_obj = paginator.get_page(page_number)
+
             return Response(
                 {'msg': 'Displayed all book details by rating order', 'data': book_dict.data, 'page': str(page_obj)})
 
