@@ -31,12 +31,10 @@ class AddToCart(generics.GenericAPIView):
             book_id = user_data.get('book_id')
             quantity = user_data.get('quantity')
             books = Book.objects.get(pk=book_id)
-            print('book', books)
             if not books:
                 raise BookDoesnotNotExist('Book does not Exist', 404)
             total_price = books.price * quantity
             user = User.objects.get(pk=user_id)
-            print("hello", user)
             if not user:
                 raise UserDoesNotExist('User does not Exist', 404)
             cart = Cart.objects.create(user_id=user, book_id=books, quantity=quantity, total_price=total_price)
@@ -56,11 +54,9 @@ class AddToCart(generics.GenericAPIView):
                """
         try:
             user = User.objects.get(pk=user_id)
-            print("user", user)
             cart = Cart.objects.filter(user_id=user)
 
             cart_items = GetCartSerializer(instance=cart, many=True)
-            print("cart_items", cart_items)
             return Response({'cart_items ': cart_items.data, 'code': 200})
         except Exception as e:
             self.logger.debug(msg=str(e))

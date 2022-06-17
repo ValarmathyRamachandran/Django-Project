@@ -1,13 +1,11 @@
 from django.contrib.sites.shortcuts import get_current_site
 from django.db.models import Q
-from django.http import HttpResponse
 from django.urls import reverse
 from rest_framework.views import Response
 from .serializers import RegistrationSerializer, LoginSerializers, ResetPasswordSerializer
-from django.contrib.auth import get_user_model, authenticate, login, logout, get_user
+from django.contrib.auth import get_user_model, authenticate, login, logout
 from rest_framework import permissions, generics
-
-from .token_operations import get_token, get_data, Common, mail
+from .token_operations import get_token, get_data, Common
 
 User = get_user_model()
 
@@ -72,7 +70,6 @@ class LoginApiView(generics.GenericAPIView):
                 return Response({'Error': 'Invalid email or password', 'code': 401})
             login(request, user)
             token = get_token(user)
-            mail()
             return Response({'msg': 'User Logged in Successfully', 'code': 200, 'token': token})
 
         except Exception:
