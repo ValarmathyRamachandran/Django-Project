@@ -5,7 +5,6 @@ User = get_user_model()
 
 
 class RegistrationSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(style={'input_type': 'password'})
     confirm_password = serializers.CharField(style={'input_type': 'password'}, write_only=True)
 
     class Meta:
@@ -17,10 +16,22 @@ class RegistrationSerializer(serializers.ModelSerializer):
             'email',
             'password',
             'confirm_password',
-
         ]
         extra_kwargs = {'password': {'write_only': True}}
         required_fields = ['first_name', 'last_name', 'username', 'email', 'password', 'confirm_password']
+
+    def save(self):
+        user = User(email=self.validated_data['email'],
+                    username=self.validated_data['username'],
+                    )
+        password = self.validated_data['password']
+        confirm_password = self.validated_data['confirm_password']
+
+        if password != confirm_password:
+            raise serializers.ValidationError({'password': 'Password must match.'})
+        user.set_password(password)
+        user.save()
+        return user
 
 
 class LoginSerializers(serializers.ModelSerializer):
@@ -31,3 +42,23 @@ class LoginSerializers(serializers.ModelSerializer):
         model = User
         fields = ['username', 'password']
         required_fields = fields
+
+
+class EmailSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = [
+            'email'
+        ]
+
+
+class ResetPasswordSerializer(serializers.ModelSerializer):
+    username = serializers.CharField()
+    old_password = serializers.CharField(style={'input_type': 'password'})
+    new_password = serializers.CharField(style={'input_type': 'password'})
+    confirm_new_password = serializers.CharField(style={'input_type': 'password'})
+
+    class Meta:
+        model = User
+        fields = ['username', 'old_password', 'new_password', 'confirm_new_password']
+        required_fields = ['username', 'new_password']
